@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^/\.branches/
+RewriteCond %{HTTP_HOST} ^(.+)\.git\..*
+RewriteRule ^(.*)$ /.branches/%1/$1 [L]
